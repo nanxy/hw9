@@ -233,30 +233,18 @@ public:
 			cin >> col;
 			p1(row, col);
 
-			if (turns >= 5)
-			{
-				if (win())
-				{
-					cout << "The game is over." << endl;
-					init();
-
-				}
+			if (TicTacToe::win() == true) {
+				return;
 			}
 			cout << "Player Two, choose which row you would like to place your move, 1, 2, or 3 ? " << endl;
 				cin >> row;
 			cout << "Choose which column you would like to place your move, 1, 2, or 3? " << endl;
 			cin >> col;
 			p2(row,col);
-
-			if (turns >= 5)
-			{
-				if (win())
-				{
-					cout << "The game is over." << endl;
-					init();
-
-				}
+			if (TicTacToe::win() == true) {
+				return;
 			}
+
 		}
 	}
 
@@ -319,19 +307,20 @@ public:
 		void play(){
 			int row, col;
 			
-			do 
-			{
-			
 					cout << "Choose which row you would like to place your move, 1, 2, or 3? " << endl;
 					cin >> row;
 					cout << "Choose which column you would like to place your move, 1, 2, or 3? " << endl;
 					cin >> col;
-					p1(row, col);			
+					p1(row, col);	
+					if (TicTacToe::win() == true) {
+						return;
+					}
 					cout << "The bot will now take it's turn." << endl;
 					bot();
-				
+					if (TicTacToe::win() == true) {
+						return;
+					}
 			
-			} while (!win);
 
 
 	}
