@@ -15,36 +15,42 @@ class TicTacToe
 {
 private:
 	bool winrow(){
-		if ((board[0][0] = 'O') && (board[1][0] = 'O') && (board[2][0] = 'O'))
+
+		if ((board[1][0] == 'O') && (board[1][1] == 'O') && (board[1][2] == 'O'))
 		{
-			cout << "Player 1 won! a" << endl;
+			cout << "Player 1 won! " << endl;
+			cout << "================================================================" << endl;
 			return true;
 		}
-		else if ((board[1][0] = 'O') && (board[1][1] = 'O') && (board[1][2] = 'O'))
+		else if ((board[0][0] == 'O') && (board[0][1]== 'O') && (board[0][2] == 'O'))
 		{
-			cout << "Player 1 won! b" << endl;
+			cout << "Player 1 won! " << endl;
+			cout << "================================================================" << endl;
+			return true;
+		}
+		else if ((board[2][0] == 'O') && (board[2][1] == 'O') && (board[2][2] == 'O'))
+		{
+			cout << "Player 1 won!" << endl;
+			cout << "================================================================" << endl;
 			return true;
 
 		}
-		else if ((board[2][0] = 'O') && (board[2][1] = 'O') && (board[2][2] = 'O'))
+		else if ((board[0][0] == 'X') && (board[1][0] == 'X') && (board[2][0] == 'X'))
 		{
-			cout << "Player 1 won!c" << endl;
-			return true;
-
-		}
-		else if ((board[0][0] = 'X') && (board[1][0] = 'X') && (board[2][0] = 'X'))
-		{
-			cout << "P2 won!d" << endl;
+			cout << "P2 won!" << endl;
+			cout << "================================================================" << endl;
 			return true;
 		}
-		else if ((board[1][0] = 'X') && (board[1][1] = 'X') && (board[1][2] = 'X'))
+		else if ((board[1][0] == 'X') && (board[1][1] == 'X') && (board[1][2] == 'X'))
 		{
-			cout << "P2 won!e" << endl;
+			cout << "P2 won!" << endl;
+			cout << "================================================================" << endl;
 			return true;
 		}
-		else if ((board[2][0] = 'X') && (board[2][1] = 'X') && (board[2][2] = 'X'))
+		else if ((board[2][0] == 'X') && (board[2][1] == 'X') && (board[2][2] == 'X'))
 		{
-			cout << "P2 won!f" << endl;
+			cout << "P2 won!" << endl;
+			cout << "================================================================" << endl;
 			return true;
 		}
 		else
@@ -52,65 +58,74 @@ private:
 	};
 	bool wincol()		
 	{
-		if ((board[0][0] = 'O') && (board[1][0] = 'O') && (board[2][0] = 'O'))
+		if ((board[0][0] == 'O') && (board[1][0] == 'O') && (board[2][0] == 'O'))
 	{
-		cout << "Player 1 won!g" << endl;
+		cout << "Player 1 won!" << endl;
+		cout << "================================================================" << endl;
 		return true;
 	}//first column
-		else if((board[1][0] = 'O') && (board[1][1] = 'O') && (board[1][2] = 'O'))
+		else if((board[1][0] == 'O') && (board[1][1] == 'O') && (board[1][2] == 'O'))
 	{
-		cout << "Player 1 won!h" << endl;
+		cout << "Player 1 won!" << endl;
+		cout << "================================================================" << endl;
 		return true;
 
 	}//second col
-	else if((board[2][0] = 'O') && (board[2][1] = 'O') && (board[2][2] = 'O'))
+	else if((board[2][0] == 'O') && (board[2][1] == 'O') && (board[2][2] == 'O'))
 	{
-		cout << "Player 1 won!i" << endl;
+		cout << "Player 1 won!" << endl;
+		cout << "================================================================" << endl;
 		return true;
 
 	}//third col
-	else if((board[0][0] = 'X') && (board[0][1] = 'X') && (board[2][0] = 'X'))
+	else if((board[0][0] == 'X') && (board[0][1] == 'X') && (board[2][0] == 'X'))
 	{
-		cout << "P2 won!j" << endl;
+		cout << "P2 won!" << endl;
+		cout << "================================================================" << endl;
 		return true;
 	}//first col
-	else if((board[1][0] = 'X') && (board[1][1] = 'X') && (board[1][2] = 'X'))
+	else if((board[1][0] == 'X') && (board[1][1] == 'X') && (board[1][2] == 'X'))
 	{
-		cout << "P2 won!k" << endl;
+		cout << "P2 won!" << endl;
+		cout << "================================================================" << endl;
 		return true;
 	}//second col
-	else if ((board[2][0] = 'X') && (board[2][1] = 'X') && (board[2][2] = 'X'))
+	else if ((board[2][0] == 'X') && (board[2][1] == 'X') && (board[2][2] == 'X'))
 	{
-		cout << "P2 won!l" << endl;
+		cout << "P2 won!" << endl;
+		cout << "================================================================" << endl;
 		return true;
 	}//third col
-	else 
 		return false;
 };
 	bool windia(){
-		if ((board[0][0] = 'O') && (board[1][1] = 'O') && (board[2][2] = 'O'))
+		if ((board[0][0] == 'O') && (board[1][1] == 'O') && (board[2][2] == 'O'))
 		{
-			cout << "Player 1 won!m" << endl;
+			cout << "Player 1 won!" << endl;
+			cout << "================================================================" << endl;
 			return true;
 		}
-		else if ((board[2][0] = 'O') && (board[1][1] = 'O') && (board[0][2] = 'O'))
+		else if ((board[2][0] == 'O') && (board[1][1] == 'O') && (board[0][2] == 'O'))
 		{
-			cout << "Player 1 won!n" << endl;
-			return true;
-
-		}
-		else if ((board[0][0] = 'X') && (board[1][1] = 'X') && (board[2][2] = 'X'))
-		{
-			cout << "P2 won!o" << endl;
-			return true;
-		}
-		else if ((board[2][0] = 'X') && (board[1][1] = 'X') && (board[0][2] = 'X'))
-		{
-			cout << "P2 won!p" << endl;
+			cout << "Player 1 won!" << endl;
+			cout << "================================================================" << endl;
 			return true;
 
 		}
-		else
+		else if ((board[0][0] == 'X') && (board[1][1] == 'X') && (board[2][2] == 'X'))
+		{
+			cout << "P2 won!" << endl;
+			cout << "================================================================" << endl;
+			return true;
+		}
+		else if ((board[2][0] == 'X') && (board[1][1] == 'X') && (board[0][2] == 'X'))
+		{
+			cout << "P2 won!" << endl;
+			cout << "================================================================" << endl;
+			return true;
+
+		}
+
 		return false;
 	};
 protected:
@@ -132,6 +147,7 @@ public:
 			}
 		}//fill board with *
 		turns = 0;
+		
 	}
 	void update(int row, int col)
 	{
@@ -154,7 +170,6 @@ public:
 				}//odd turns are set 
 				else board[row][col] = 'X';
 				print();
-
 
 
 		}
@@ -191,18 +206,17 @@ public:
 
 	};
 	bool win(){
-		if (turns == 9)
+		
+		if (winrow()|| wincol()|| windia())
+		{
+			return true;
+		}
+		else if (turns == 9)
 		{
 			cout << "There was a tie." << endl;
 			return true;
 		}
-
-		if (winrow()|| wincol()|| windia())
-		{
-
-			return true;
-		}
-		else return false;
+		 return false;
 
 
 	};
@@ -224,7 +238,7 @@ public:
 	}
 	void play(){
 		int row, col;
-		while (TicTacToe::turns != 9)
+		while (TicTacToe::turns <= 9)
 		{
 			
 			cout << "Player One, choose which row you would like to place your move, 1, 2, or 3 ? " << endl;
@@ -237,7 +251,7 @@ public:
 				return;
 			}
 			cout << "Player Two, choose which row you would like to place your move, 1, 2, or 3 ? " << endl;
-				cin >> row;
+			cin >> row;
 			cout << "Choose which column you would like to place your move, 1, 2, or 3? " << endl;
 			cin >> col;
 			p2(row,col);
@@ -306,20 +320,23 @@ public:
 		};
 		void play(){
 			int row, col;
-			
-					cout << "Choose which row you would like to place your move, 1, 2, or 3? " << endl;
-					cin >> row;
-					cout << "Choose which column you would like to place your move, 1, 2, or 3? " << endl;
-					cin >> col;
-					p1(row, col);	
-					if (TicTacToe::win() == true) {
-						return;
-					}
-					cout << "The bot will now take it's turn." << endl;
-					bot();
-					if (TicTacToe::win() == true) {
-						return;
-					}
+			while (TicTacToe::turns <= 9)
+			{
+				cout << "Choose which row you would like to place your move, 1, 2, or 3? " << endl;
+				cin >> row;
+				cout << "Choose which column you would like to place your move, 1, 2, or 3? " << endl;
+				cin >> col;
+				p1(row, col);
+
+				if (TicTacToe::win() == true) {
+					return;
+				}
+				cout << "The bot will now take it's turn." << endl;
+				bot();
+				if (TicTacToe::win() == true) {
+					return;
+				}
+			}
 			
 
 
